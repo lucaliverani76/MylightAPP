@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/Scan_for_Devices"
+        android:layout_width="349dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:text="Scan_for_Devices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Change_Wifi_AccessPoint" />
+
+    <Button
+        android:id="@+id/Change_Wifi_AccessPoint"
+        android:layout_width="349dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:text="Change_Wifi_AccessPoint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecView_devices"
+        android:layout_width="362dp"
+        android:layout_height="484dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Scan_for_Devices" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RecView_devices">
+
+        <ImageView
+            android:id="@+id/image_music"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/image_mic"
+            tools:srcCompat="@tools:sample/avatars"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/image_mic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toEndOf="@+id/image_music"
+            tools:srcCompat="@tools:sample/avatars"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
